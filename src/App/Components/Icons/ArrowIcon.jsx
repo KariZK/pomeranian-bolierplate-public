@@ -1,4 +1,4 @@
-export function Arrow({ className = '' }) {
+export function ArrowIcon({ className = '' }) {
   return (
     <svg
       width="16"
