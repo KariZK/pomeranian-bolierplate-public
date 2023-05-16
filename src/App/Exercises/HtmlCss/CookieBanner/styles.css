@@ -1,0 +1,108 @@
+.cookie-banner {
+  background-color: #23213d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  font-family: 'Poppins';
+  gap: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 120px;
+  gap: 31px;
+
+  height: 339px;
+}
+
+.cookie-banner-content {
+  flex: 3;
+}
+
+.cookie-icon {
+  float: left;
+  margin: 32px 32px 16px 0;
+  position: relative;
+  float: left;
+}
+
+h3 {
+  width: 400px;
+  height: 32px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.text-1 {
+  color: #ffffff;
+  size: 16px;
+  line-height: 26px;
+}
+
+.section-2 {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.button-1 {
+  background: red;
+  border: none;
+  color: #ffffff;
+  height: 50px;
+  width: 188px;
+  left: 180px;
+  top: 0px;
+  border-radius: 8px;
+  padding: 20px 36px 20px 36px;
+
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  gap: 16px;
+  display: flex;
+}
+
+.button-2 {
+  background: #ffffff;
+  border: none;
+  color: #fe3756;
+  height: 50px;
+  width: 188px;
+  left: 180px;
+  top: 0px;
+  border-radius: 8px;
+  padding: 20px 36px 20px 36px;
+  text-align: center;
+  display: flex;
+
+  font-size: 13px;
+  gap: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.cookie-hidden {
+  display: none;
+}
+
+@media (max-width: 390px) {
+  .cookie-banner {
+    display: block;
+    height: 400px;
+    font-size: 10vw;
+  }
+  .text-1 {
+  }
+  .section-2 {
+  }
+}
