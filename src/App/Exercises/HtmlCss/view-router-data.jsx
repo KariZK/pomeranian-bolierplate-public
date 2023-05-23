@@ -1,7 +1,4 @@
-
 import { getParsedRouterDataList } from '../../router-data/parseRouterData';
-
-
 
 import { blockRouterMetaData as blockRouterMetaData121220231 } from './Exercise-example-12-12-2023-1/router-data';
 import { blockRouterMetaData as blockRouterMetaData050520231 } from './Selectorsandcascade/router-data';
@@ -13,7 +10,7 @@ import { blockRouterMetaData as blockRouterMetaData090520233 } from './Backgroun
 import { blockRouterMetaData as blockRouterMetaData100520231 } from './BoxModel/router-data';
 import { blockRouterMetaData as blockRouterMetaData110520232 } from './ArrayRendering/router-data';
 import { blockRouterMetaData as blockRouterMetaData110520231 } from './HTMLTables/router-data';
-
+import { blockRouterMetaData as blockRouterMetaData150520231 } from './CookieBanner/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaData121220231,
@@ -24,10 +21,9 @@ export const blockRouterMetaData = [
   blockRouterMetaData090520232,
   blockRouterMetaData090520233,
   blockRouterMetaData100520231,
-    blockRouterMetaData110520231,
+  blockRouterMetaData110520231,
   blockRouterMetaData110520232,
+  blockRouterMetaData150520231,
 ];
 
-
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
-
