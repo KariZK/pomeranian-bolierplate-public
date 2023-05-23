@@ -1,0 +1,38 @@
+.header-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.cog-icon {
+  height: 26px;
+  width: 25.20037269592285px;
+  left: 0.3997802734375px;
+
+  margin: 20px;
+  padding: 20px;
+}
+
+.circle {
+  height: 49px;
+  width: 49px;
+  background-color: #c8cbd1;
+
+  border-color: #c8cbd1;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.trainee {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.position {
+  color: gray;
+}
+
+.arrow-icon {
+  height: 19.999998092651385px;
+  width: 11.749827384948741px;
+}
