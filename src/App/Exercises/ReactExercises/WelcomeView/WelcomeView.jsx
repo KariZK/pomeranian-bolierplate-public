@@ -32,7 +32,7 @@ export const WelcomeView = () => {
           ></input>
         </div>
         <div>
-          <button className="button" onClick={() => buttonClicked()}>
+          <button className="button-welcome" onClick={() => buttonClicked()}>
             Kliknij
           </button>
         </div>
@@ -40,7 +40,7 @@ export const WelcomeView = () => {
 
       <div>{x}</div>
       <div>
-        <button className="button" onClick={() => buttonClicked()}>
+        <button className="button-welcome" onClick={() => buttonClicked()}>
           Kliknij we mnie x razy
         </button>
       </div>

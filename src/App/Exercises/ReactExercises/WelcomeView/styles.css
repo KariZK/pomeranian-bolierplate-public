@@ -30,7 +30,7 @@
   flex-grow: 0;
 }
 
-.button {
+.button-welcome {
   box-sizing: border-box;
 
   /* Auto layout */
