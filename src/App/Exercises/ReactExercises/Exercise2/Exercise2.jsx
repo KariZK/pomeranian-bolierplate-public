@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 
 import './style.css';
-import { isVisible } from '@testing-library/user-event/dist/utils';
+// import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export function Exercise2() {
   const [isVisible, setVisibility] = useState(false);

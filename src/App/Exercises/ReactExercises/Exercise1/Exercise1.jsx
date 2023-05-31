@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 
 import './style.css';
-import { click } from '@testing-library/user-event/dist/click';
+// import { click } from '@testing-library/user-event/dist/click';
 
 export function Exercise1() {
   const [clicks, setClicks] = useState(0);
@@ -29,4 +28,3 @@ export function Exercise1() {
     </div>
   );
 }
-
