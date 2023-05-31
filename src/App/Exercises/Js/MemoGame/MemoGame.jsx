@@ -30,6 +30,17 @@ const getRandomNames = (difficulty) => {
   return names;
 };
 
+const getInitialBoard = (difficulty) => {
+  const newArray = new Array(difficulty * difficulty).fill({
+    value: '',
+    clicked: false,
+    isTurned: false,
+    id: '',
+  });
+
+  return newArray.map((obj, index) => ({ ...obj, id: index }));
+};
+
 export const MemoGame = () => {
   // TODO: When all tiles turned and timer > 0 alert("Win!")
   // TODO: Fill with names
@@ -40,53 +51,46 @@ export const MemoGame = () => {
   const [difficulty, setDifficulty] = useState(2);
 
   const namesToFillTheBoard = getRandomNames(difficulty);
-  console.log('namesToFillTheBoard', namesToFillTheBoard);
 
-  const [board, setBoard] = useState(
-    new Array(2).fill(
-      new Array(2).fill({
-        value: '',
-        clicked: false,
-        isTurned: false,
-        id: '',
-      })
-    )
-  );
+  const [board, setBoard] = useState(getInitialBoard(difficulty));
   console.log('board', board);
 
   useEffect(() => {
-    if (difficulty !== board.length) {
-      setBoard(
-        new Array(difficulty).fill(
-          new Array(difficulty).fill({ value: '', clicked: false })
-        )
-      );
+    if (difficulty * difficulty !== board.length) {
+      setBoard(getInitialBoard(difficulty));
     }
   }, [difficulty]);
 
   useEffect(() => {
-    const newBoard = board.flat();
+    const newBoard = board;
     const namesAmount = namesToFillTheBoard.length;
 
     namesToFillTheBoard.forEach((name, index) => {
-      newBoard[index] = { ...newBoard[index], value: name };
+      newBoard[index] = { ...board[index], value: name };
       newBoard[index + namesAmount] = {
-        ...newBoard[index + namesAmount],
+        ...board[index + namesAmount],
         value: name,
       };
     });
 
-    const shuffledArray = shuffleArray(newBoard);
+    setBoard(newBoard);
+  }, [difficulty]);
+
+  const organizeArray = () => {
+    const shuffledArray = shuffleArray(board);
 
     const newArr = new Array(difficulty).fill('');
 
-    setBoard(
-      newArr.map((_, index) => {
-        const value = index * difficulty;
-        return shuffledArray.slice(value, value + difficulty);
-      })
-    );
-  }, []);
+    return newArr.map((_, index) => {
+      const value = index * difficulty;
+      console.log('SLICE', shuffledArray.slice(value, value + difficulty));
+      return shuffledArray.slice(value, value + difficulty);
+    });
+  };
+
+  const organizedArray = organizeArray();
+
+  console.log('organizedArray', organizedArray);
 
   return (
     <>
@@ -96,7 +100,7 @@ export const MemoGame = () => {
         className="wrapper"
         style={{ gridTemplateColumns: `repeat(${board.length}, 1fr)` }}
       >
-        <MemoBoard board={board} />
+        <MemoBoard board={organizedArray} />
       </div>
     </>
   );
