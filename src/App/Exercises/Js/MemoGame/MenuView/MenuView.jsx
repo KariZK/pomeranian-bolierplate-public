@@ -9,9 +9,10 @@ export const MenuView = ({ setGameStarted, setBoardSize }) => {
         <SelectButtons
           setBoardSize={setBoardSize}
           options={[
+            { label: '2 elementów', value: 2, isActive: true },
             { label: '8 elementów', value: 8, isActive: false },
             { label: '16 elementów', value: 16, isActive: false },
-            { label: '20 elementów', value: 20, isActive: true },
+            { label: '20 elementów', value: 20, isActive: false },
           ]}
         />
       </Menu>

@@ -2,7 +2,13 @@ import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 import './GameView.css';
 
-export const GameView = ({ setGameStarted, stepAmount, time }) => {
+export const GameView = ({
+  setGameStarted,
+  stepAmount,
+  time,
+  myTime,
+  stopButtonClick,
+}) => {
   return (
     <>
       <Menu label="Czas gry">

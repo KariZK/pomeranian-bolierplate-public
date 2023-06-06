@@ -37,7 +37,15 @@ const generateBoard = (size) => {
 
 const FIELD_CLICK_RESET_DELAY = 800;
 
-export const Board = ({ boardSize, stepAmount, setStepAmount }) => {
+export const Board = ({
+  boardSize,
+  stepAmount,
+  setStepAmount,
+  setGameEnd,
+  gameEnd,
+  time,
+  setMyTime,
+}) => {
   const [board, setBoard] = useState(generateBoard(boardSize));
   // console.log('board', board);
 
@@ -97,6 +105,14 @@ export const Board = ({ boardSize, stepAmount, setStepAmount }) => {
       resetFirstClickedFieldId();
     }
   };
+
+  useEffect(() => {
+    if (board.find((e) => e.isPaired === false)) {
+      setGameEnd(false);
+    } else {
+      setGameEnd(true);
+    }
+  }, [board, setBoard, firstClickedFieldId, secondClickedFieldId]);
 
   return (
     <div className="board">

@@ -9,7 +9,11 @@ export function MemoGame() {
   const [stepAmount, setStepAmount] = useState(0);
   const [time, setTime] = useState(0);
   const [timeInterval, setTimeInterval] = useState();
-  const [boardSize, setBoardSize] = useState(8);
+  const [boardSize, setBoardSize] = useState(2);
+
+  const [gameEnd, setGameEnd] = useState(false);
+
+  const [myTime, setMyTime] = useState(0);
 
   useEffect(() => {
     if (isGameStarted) {
@@ -27,23 +31,43 @@ export function MemoGame() {
     }
   }, [isGameStarted]);
 
+  const stopButtonClick = () => {
+    setGameStarted(false);
+    setStepAmount(0);
+  };
+
   return (
     <div className="memo-game">
+      {gameEnd && isGameStarted ? (
+        <h1>
+          Gratulacje! Twój wynik to {boardSize / 2} par w czasie {time}!
+        </h1>
+      ) : (
+        ''
+      )}
       {!isGameStarted && (
         <MenuView setGameStarted={setGameStarted} setBoardSize={setBoardSize} />
       )}
       {isGameStarted && (
         <GameView
           setGameStarted={setGameStarted}
+          boardSize={boardSize}
+          setBoardSize={setBoardSize}
           stepAmount={stepAmount}
+          setGameEnd={setGameEnd}
           time={time}
+          myTime={myTime}
+          stopButtonClick={stopButtonClick}
         />
       )}
       {isGameStarted && (
         <Board
+          setGameEnd={setGameEnd}
           boardSize={boardSize}
           stepAmount={stepAmount}
           setStepAmount={setStepAmount}
+          time={time}
+          setMyTime={setMyTime}
         />
       )}
     </div>
