@@ -13,6 +13,7 @@ import { blockRouterMetaData as blockRouterMetaDataJsSetTimeout } from './SetTim
 import { blockRouterMetaData as blockRouterMetaDataJsHitTheMoleGame } from './HitTheMoleGame/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsBlok221 } from './Blok221/router-data';
 import { blockRouterMetaData as blockRouterMetaDataJsMemoGame } from './MemoGame/router-data';
+import { blockRouterMetaData as blockRouterMetaDataJsUsersList } from './UsersList/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -28,5 +29,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataJsHitTheMoleGame,
   blockRouterMetaDataJsBlok221,
   blockRouterMetaDataJsMemoGame,
+  blockRouterMetaDataJsUsersList,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
