@@ -1,0 +1,29 @@
+.todo-item {
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 3px #dddddd;
+    padding: 20px;
+    display: flex;
+}
+
+.todo-content {
+    flex-grow: 1;
+}
+.todo-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.checked-icon {
+    color: green;
+    font-size: 3em;
+}
+
+.wastebasket-icon {
+    color: black;
+    font-size: 3em;
+    font-weight: bold;
+   border: none;
+   background: none;
+}
