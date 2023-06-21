@@ -1,65 +1,96 @@
+import { useState } from 'react';
+import { requestHandler } from '../requestHandler';
 import './TodoItem.css';
-
+import { TodoStatus } from '../TodoStatus/TodoStatus';
 
 const parseDate = (date) => {
+  if (date) {
     const dateObj = new Date(date);
     return dateObj.toDateString();
+  } else {
+    return date;
+  }
 };
 
-export const TodoItem = ({
-    id, 
-    title, 
-    createdAt, 
-    author, 
-    isDone, 
-    note, 
+export const TodoItem = (props) => {
+  const {
+    id,
+    title,
+    createdAt,
+    author,
+    isDone,
+    note,
     doneDate,
-}) => {
-    // const deleteTodo = (id) => {
-    //     fetch('http://localhost:3333/api/todo/1', {method: 'DELETE'})
-    //     .then(() => TodoItem.innerHTML = 'Delete successful');
-    // };
+    getTodoList,
+    setEditObject,
+    setShowCreateForm,
+  } = props;
 
-    return (
-        <div className="todo-item">
+  const [deleteError, setDeleteError] = useState('');
 
-            <div className='todo-content'>
+  const deleteTodo = async (selectedId) => {
+    requestHandler('DELETE', selectedId)
+      .then(() => {
+        getTodoList();
+      })
+      .catch((errorMessage) => {
+        setDeleteError(errorMessage);
+      });
+  };
 
-            <div className="todo-title">{title}
-            </div>
+  const [markAsDoneError, setMarkAsDoneError] = useState('');
 
-            <div>{author}
-            </div>
+  const markAsDone = async () => {
+    setMarkAsDoneError('');
 
-            <div>{parseDate(createdAt)}
-            </div>
+    requestHandler('PUT', `${id}/markAsDone`)
+      .then(() => {
+        getTodoList();
+      })
+      .catch(() => {
+        setMarkAsDoneError('Nie udało się ukończyć!');
+      });
+  };
 
-            <p>{note}</p>
-
-            </div>
-            <button className='wastebasket-icon' 
-            // onClick={deleteTodo}
-            >&#128465;</button>
-            <div>
-
-             {isDone && (
-
-             <div>
-
-
-
-             <div className="checked-icon">&#10004;
-             </div>
-
-             <div>{parseDate(doneDate)}
-             </div>
-
-            
-             </div>
-          )}
-
-        </div>
-        </div>
-    );
+  return (
+    <div className="todo-item">
+      <div className="todo-content">
+        <div className="todo-title">{title}</div>
+        <div>{author}</div>
+        <div>{parseDate(createdAt)}</div>
+        <p>{note}</p>
+      </div>
+      <div>
+        <button
+          className="todo-button"
+          onClick={() => {
+            deleteTodo(id);
+          }}
+        >
+          Delete
+        </button>
+        <button
+          className="todo-button"
+          onClick={() => {
+            setShowCreateForm(true);
+            setEditObject({
+              id: id,
+              title: title,
+              author: author,
+              note: note,
+            });
+          }}
+        >
+          Edit
+        </button>
+        <div className="delete-error">{deleteError}</div>
+        <TodoStatus
+          isDone={isDone}
+          isDoneDate={parseDate(doneDate)}
+          markAsDone={markAsDone}
+          markAsDoneError={markAsDoneError}
+        />
+      </div>
+    </div>
+  );
 };
-
