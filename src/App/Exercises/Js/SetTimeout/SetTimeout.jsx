@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles.css';
 
+
 // setTimeout(() => {
 //   console.log('this is the first message');
 // }, 5000);
@@ -26,13 +27,16 @@ import './styles.css';
 // };
 
 export const SetTimeout = () => {
-  //   const initialState = { fontState: '16px', trasitions: 'all 5s' };
-  //  const [style, setStyle] = useState(initialState);
-  // const onClickHandle = () => {
-  //   setStyle((prev) => ({...prev, fontSize: '100px' }));
-  // };
-
-  return;
-  <div></div>;
-  //   <button onClick={onClickHandle}>ssss</button>;
+  const initialState = { fontState: '16px', trasitions: 'all 5s' };
+ const [style, setStyle] = useState(initialState);
+const onClickHandle = () => {
+  setStyle((prev) => ({...prev, fontSize: '100px' }));
 };
+
+  return (
+<div>
+<button onClick={onClickHandle}>ssss</button>;
+</div>
+);
+}
+

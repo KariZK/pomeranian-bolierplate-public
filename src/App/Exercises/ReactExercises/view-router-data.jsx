@@ -9,6 +9,9 @@ import { SubRouteExample4 } from './Exercise4/router-data';
 import { SubRouteExample5 } from './MaterialUIBasicElements/router-data';
 import { SubRouteExample6 } from './MUITemplateDashboard/router-data';
 import { SubRouteReactUseRef } from './ReactUseRefEx/router-data';
+import { SubRouteTodoList } from './TodoList/router-data';
+import { SideEffectsData } from './SideEffects/router-data';
+
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -20,5 +23,7 @@ export const blockRouterMetaData = [
   SubRouteExample5,
   SubRouteExample6,
   SubRouteReactUseRef,
+  SubRouteTodoList,
+  SideEffectsData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

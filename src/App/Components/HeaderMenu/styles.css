@@ -1,25 +1,24 @@
 .header-menu {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .cog-icon {
   height: 26px;
-  width: 25.20037269592285px;
-  left: 0.3997802734375px;
+  width: 26px;
 
-  margin: 20px;
-  padding: 20px;
+  align-items: center;
 }
 
 .circle {
   height: 49px;
   width: 49px;
   background-color: #c8cbd1;
-
+  margin: 20px;
   border-color: #c8cbd1;
   border-radius: 50%;
-  text-align: center;
+  text-align: right;
 }
 
 .trainee {
@@ -33,6 +32,8 @@
 }
 
 .arrow-icon {
-  height: 19.999998092651385px;
-  width: 11.749827384948741px;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  display: flex;
 }
