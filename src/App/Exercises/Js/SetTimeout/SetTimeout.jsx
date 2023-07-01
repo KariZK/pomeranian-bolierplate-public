@@ -37,3 +37,7 @@ import './styles.css';
 //   <button onClick={onClickHandle}>ssss</button>;
 //   );
 // };
+
+export const SetTimeout = () => {
+    return <div>Change me X</div>;
+  };
