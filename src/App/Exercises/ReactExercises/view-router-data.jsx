@@ -11,7 +11,7 @@ import { SubRouteExample6 } from './MUITemplateDashboard/router-data';
 import { SubRouteReactUseRef } from './ReactUseRefEx/router-data';
 import { SubRouteTodoList } from './TodoList/router-data';
 import { SideEffectsData } from './SideEffects/router-data';
-
+import { FormsMetaData } from './Forms/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -25,5 +25,6 @@ export const blockRouterMetaData = [
   SubRouteReactUseRef,
   SubRouteTodoList,
   SideEffectsData,
+  FormsMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
