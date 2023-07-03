@@ -12,6 +12,7 @@ import { SubRouteReactUseRef } from './ReactUseRefEx/router-data';
 import { SubRouteTodoList } from './TodoList/router-data';
 import { SideEffectsData } from './SideEffects/router-data';
 import { FormsMetaData } from './Forms/router-data';
+import { FormsValidationMetaData } from './FormsValidation/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -26,5 +27,6 @@ export const blockRouterMetaData = [
   SubRouteTodoList,
   SideEffectsData,
   FormsMetaData,
+  FormsValidationMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
