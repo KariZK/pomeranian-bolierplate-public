@@ -1,6 +1,7 @@
 import './styles.css';
 import { CogIcon } from '../../Components/Icons/CogIcon';
 import { ArrowIcon } from '../../Components/Icons/ArrowIcon';
+import { Logo } from '../Logo/Logo';
 
 export const HeaderMenu = () => {
   return (
@@ -10,8 +11,8 @@ export const HeaderMenu = () => {
       </div>
       <div className="circle"></div>
       <div className="trainee">
-        <div className="name">Karina</div>
-        <div className="position">kursant</div>
+        <div className="trainee-name">Karina</div>
+        <span className="position">kursantka</span>
       </div>
       <div className="arrow-icon">
         <ArrowIcon />
