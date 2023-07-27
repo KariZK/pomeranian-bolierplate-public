@@ -1,8 +1,78 @@
 .dashboard {
   display: flex;
-  height: 360px;
-  width: 334px;
   border: none;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  margin-left: 30px;
+}
+
+.dashboard-hi {
+  color: #ff4d69;
+}
+
+.dashboard-data {
+  width: 500px;
+  height: 400px;
+  margin-right: 90px;
+}
+
+.dashboard-blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 30px 30px 30px 30px;
+}
+
+.block-cv {
+  width: 202px;
+  height: 192px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 12px;
+  border: 0.6px;
+
+  font-family: Poppins;
+  box-shadow: 0px 2px 28px 0px #0000001f;
+  margin: 30px;
+}
+
+.block-cv:hover {
+  box-shadow: 0px 2px 26px 0px #fe37568a;
+}
+
+.block-icon path {
+  align-items: center;
+}
+
+.block-icon-dash:hover path {
+  stroke: #ff4d69;
+}
+
+.block-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: center;
+  color: black;
+}
+
+.block-title:hover {
+  color: #ff4d69;
+}
+.block-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+.block-more {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #ff4d69;
+}
+
+.block-more-icon {
+  stroke: #ff4d69;
+  height: 2px;
 }

@@ -5,7 +5,11 @@ import { EditIcon } from '../Components/Icons/EditIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { Faq } from '../Components/Icons/Faq';
-
+import { TechStackIcon } from '../Components/Icons/TechStackIcon';
+import { PadIcon } from '../Components/Icons/PadIcon';
+import { GameboyIcon } from '../Components/Icons/GameboyIcon';
+import { FormIcon } from '../Components/Icons/FormIcon';
+import { CogIcon } from '../Components/Icons/CogIcon';
 import './styles/aside.css';
 
 export function AppAside() {
@@ -27,13 +31,31 @@ export function AppAside() {
 
           <li>
             <NavLink className="aside-row" to="blocks">
-              <ElementIcon className="menu-icon" /> Bloki
+              <TechStackIcon className="menu-icon" /> Tech stack
             </NavLink>
           </li>
 
           <li>
             <NavLink className="aside-row" to="exercises">
               <EditIcon className="menu-icon" /> Ćwiczenia
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className="aside-row" to="exercises/js/hit-the-mole">
+              <PadIcon className="menu-icon" /> Gra | kret
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className="aside-row" to="exercises/js/memo-game">
+              <GameboyIcon className="menu-icon" /> Gra | memo
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className="aside-row" to="exercises/react/forms">
+              <FormIcon className="menu-icon" /> Formularz
             </NavLink>
           </li>
 
@@ -50,7 +72,15 @@ export function AppAside() {
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '1rem 0' }}>Sidebar items, widgets, etc</p>
+      <div style={{ padding: '1rem 0' }}>
+        <ul>
+          <li>
+            <NavLink className="aside-row" to="faq">
+              <CogIcon className="menu-icon" /> Ustawienia
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </aside>
   );
 }

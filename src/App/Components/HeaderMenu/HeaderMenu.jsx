@@ -1,7 +1,6 @@
 import './styles.css';
 import { CogIcon } from '../../Components/Icons/CogIcon';
 import { ArrowIcon } from '../../Components/Icons/ArrowIcon';
-import { Logo } from '../Logo/Logo';
 
 export const HeaderMenu = () => {
   return (

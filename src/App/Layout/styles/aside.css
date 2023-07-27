@@ -5,6 +5,9 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  font-family: Poppins;
+  width: fit-content;
+  margin-right: 30px;
 }
 
 aside ul {
@@ -26,14 +29,15 @@ aside li {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
 }
 
 aside li a {
   display: block;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 aside a.active {
-  background-color: var(--color-primary-blue);
-  color: var(--color-white);
+  /* background-color: var(--color-primary-blue); */
+  color: var(--color-#ff4d69);
 }

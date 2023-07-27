@@ -5,6 +5,7 @@ export function CogIcon({ className = '' }) {
       height="23"
       viewBox="0 0 22 23"
       fill="none"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
